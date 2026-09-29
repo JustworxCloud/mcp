@@ -1,0 +1,26 @@
+{
+  "name": "jwx-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Justworx MCP server — expose devices as MCP tools + resources over the Justworx API (/api/v2)",
+  "type": "module",
+  "bin": {
+    "jwx-mcp": "src/index.js",
+    "jwx-mcp-http": "src/http-entry.js"
+  },
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "start:http": "node src/http-entry.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "express": "^5.2.1",
+    "jose": "^6.2.8",
+    "zod": "^3.25.0"
+  }
+}
